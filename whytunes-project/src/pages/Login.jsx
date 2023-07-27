@@ -26,27 +26,43 @@ function Login() {
     };
 
     if (loading) {
-        return <Loading />;
+        return <Loading centered />;
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="name">
+        <div className="container d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+            <form
+                className="p-5 rounded shadow text-white"
+                style={{
+                    backgroundColor: '#000',
+                    background: "linear-gradient(to right, #000 10%, #008000 90%)",
+                    width: '60%',   // Aumentar a largura do formulário
+                    fontSize: '1.5rem'   // Aumentar o tamanho da fonte
+                }}
+                onSubmit={handleSubmit}
+            >
+                <h2 className="mb-3">WhyTunes Music</h2>
+                <div className="mb-3">
                     <input
                         id="name"
                         type="text"
+                        className="form-control"
                         value={name}
                         onChange={(event) => setName(event.target.value)}
                         placeholder='Digite o seu Nome'
+                        style={{ fontSize: '1.2rem' }} // Aumentar o tamanho da fonte do input
                     />
-                </label>
-                <button
-                    type="submit"
-                    disabled={isButtonDisabled}
-                >
-                    Entrar
-                </button>
+                </div>
+                <div className="d-flex justify-content-center">
+                    <button
+                        type="submit"
+                        className="btn btn-light"
+                        disabled={isButtonDisabled}
+                        style={{ fontSize: '1.2rem' }} // Aumentar o tamanho da fonte do botão
+                    >
+                        Entrar
+                    </button>
+                </div>
             </form>
         </div>
     );

@@ -53,53 +53,65 @@ const ProfileEdit = () => {
         navigate('/profile');
     };
 
-    if (loading) return <Loading />;
+    if (loading) return <Loading centered />;
 
     return (
         <div>
             <Header />
 
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="name">
-                    Nome completo
+            <form onSubmit={handleSubmit} className="w-50 mx-auto my-5">
+                <div className="mb-3">
+                    <label htmlFor="name" className="form-label">
+                        Nome completo
+                    </label>
                     <input
                         id="name"
                         name="name"
                         type="text"
                         value={values.name}
                         onChange={handleInputChange}
+                        className="form-control"
                     />
-                </label>
-                <label htmlFor="email">
-                    Email
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="email" className="form-label">
+                        Email
+                    </label>
                     <input
                         id="email"
                         name="email"
                         type="email"
                         value={values.email}
                         onChange={handleInputChange}
+                        className="form-control"
                     />
-                </label>
-                <label htmlFor="description">
-                    Descrição sobre você
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="description" className="form-label">
+                        Descrição sobre você
+                    </label>
                     <textarea
                         id="description"
                         name="description"
                         value={values.description}
                         onChange={handleInputChange}
+                        className="form-control"
                     />
-                </label>
-                <label htmlFor="image">
-                    Imagem de perfil
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="image" className="form-label">
+                        Imagem de perfil
+                    </label>
                     <input
                         id="image"
                         name="image"
                         type="url"
                         value={values.image}
                         onChange={handleInputChange}
+                        className="form-control"
                     />
-                </label>
-                <button type="submit">
+                </div>
+                <button type="submit" className="btn btn-primary">
                     Salvar
                 </button>
             </form>
