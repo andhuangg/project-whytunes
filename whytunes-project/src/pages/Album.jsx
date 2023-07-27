@@ -33,7 +33,7 @@ const Album = () => {
         loadFavoriteSongs();
     }, []);
 
-    if (loading) return <Loading />;
+    if (loading) return <Loading centered />;
     if (!musics) return <p>Não há músicas disponíveis</p>;
 
     return (
@@ -41,10 +41,9 @@ const Album = () => {
             <Header />
 
             {album && (
-                <>
-                    <h2>{album.artistName}</h2>
-                    <h3>{album.collectionName}</h3>
-                </>
+                <div className="text-center">
+                    <h2>{album.collectionName} ({album.artistName})</h2>
+                </div>
             )}
             {musics.length > 0 && musics.map((music) => (
                 <MusicCard

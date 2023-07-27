@@ -1,4 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
 const USER_KEY = 'user';
 const TIMEOUT = 1500;
 const SUCCESS_STATUS = 'OK';

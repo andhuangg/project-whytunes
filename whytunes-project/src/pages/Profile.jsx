@@ -18,17 +18,21 @@ const Profile = () => {
         fetchUser();
     }, []);
 
-    if (loading) return <Loading />;
+    if (loading) return <Loading centered />;
 
     return (
         <div>
             <Header />
 
-            <h2>{user.name}</h2>
-            <img src={user.image} alt={user.name} />
-            <h3>{user.email}</h3>
-            <p>{user.description}</p>
-            <Link to="/profile/edit">Editar perfil</Link>
+            <div className="card mb-4 shadow" style={{ width: '60%', margin: 'auto', marginTop: '50px' }}>
+                <div className="card-body text-center">
+                    <img src={user.image} alt={user.name} className="rounded-circle mb-4" style={{ width: '200px' }} />
+                    <h2 className="card-title">{user.name}</h2>
+                    <h3 className="card-subtitle mb-2 text-muted">{user.email}</h3>
+                    <p className="card-text">{user.description}</p>
+                    <Link to="/profile/edit" className="btn btn-primary">Editar perfil</Link>
+                </div>
+            </div>
         </div>
     );
 };
