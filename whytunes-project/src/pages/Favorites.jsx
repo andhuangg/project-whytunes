@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Loading from '../components/Loading';
-import MusicCard from '../components/musicCard';
 import Header from '../components/Header';
 import { Link } from 'react-router-dom';
+import MusicCard from '../components/musicCardTemp';
 
 const FavoriteSongs = () => {
     const [favoriteSongs, setFavoriteSongs] = useState([]);
