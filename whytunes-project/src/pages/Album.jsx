@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import getMusics from '../services/musicsAPI';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Loading from '../components/Loading';
-import MusicCard from '../components/musicCard';
+import MusicCard from '../components/MusicCard';
 import Header from '../components/Header';
 
 const Album = () => {
