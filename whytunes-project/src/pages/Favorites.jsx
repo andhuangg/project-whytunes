@@ -3,7 +3,7 @@ import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Loading from '../components/Loading';
 import Header from '../components/Header';
 import { Link } from 'react-router-dom';
-import MusicCard from '../components/musicCardTemp';
+import MusicCard from '../components/MusicCard';
 
 const FavoriteSongs = () => {
     const [favoriteSongs, setFavoriteSongs] = useState([]);
