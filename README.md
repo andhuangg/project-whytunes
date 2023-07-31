@@ -16,4 +16,5 @@ Para instalar e rodar este projeto localmente, você precisa ter instalado o Nod
 - Para rodar o projeto localmente: `npm start`
 
 ![Screenshot 01](https://github.com/andhuangg/project-whytunes/blob/main/whytunes-project/images/screenshot01.png?raw=true)
+
 ![Screenshot 02](https://github.com/andhuangg/project-whytunes/blob/main/whytunes-project/images/screenshot02.png?raw=true)
