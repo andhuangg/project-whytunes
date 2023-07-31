@@ -39,7 +39,13 @@ function Search() {
                 <Loading />
             ) : (
                 <div className="container mt-4">
-                    <div className="input-group mb-3">
+                    <form
+                        className="input-group mb-3"
+                        onSubmit={(e) => {
+                            e.preventDefault();
+                            handleSearch(search, false);
+                        }}
+                    >
                         <input
                             type="text"
                             className="form-control border-dark shadow"
@@ -50,25 +56,28 @@ function Search() {
                         <div className="input-group-append">
                             <button
                                 className="btn btn-light border-dark shadow ms-2"
-                                type="button"
-                                onClick={() => handleSearch(search, false)}
+                                type="submit"
                                 disabled={search.length < 2}
                             >
                                 <i className="bi bi-search"></i>
                             </button>
                         </div>
-                    </div>
-                    {searched && searchedArtist && !initialSearch && (
-                        <h2>Resultado de álbuns de: {searchedArtist}</h2>
+                    </form>
+                    {searched && (
+                        initialSearch ? (
+                            <h2>Recomendados:</h2>
+                        ) : (
+                            searchedArtist && <h2>Resultado de álbuns de: {searchedArtist}</h2>
+                        )
                     )}
                     <div className="row">
                         {albums.length > 0 ? (
                             (initialSearch ? albums.slice(0, 8) : albums).map((album) => (
                                 <div className="col-sm-6 col-md-4 col-lg-3 mb-4" key={album.collectionId}>
-                                    <Link to={`/album/${album.collectionId}`}>
+                                    <Link to={`/album/${album.collectionId}`} className="text-decoration-none">
                                         <div className="card h-100 album-card border-dark shadow">
                                             <img src={album.artworkUrl100} className="card-img-top" alt={album.collectionName} />
-                                            <div className="card-body">
+                                            <div className="card-body bg-dark text-white">
                                                 <p className="card-text">{album.collectionName}</p>
                                             </div>
                                         </div>
