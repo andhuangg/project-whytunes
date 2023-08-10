@@ -8,9 +8,8 @@ WhyTunes é um aplicativo de música construído usando React.js e a API de mús
 - Bootstrap
 - iTunes API
 
-## Como Instalar e Rodar o Projeto
-Para instalar e rodar este projeto localmente, você precisa ter instalado o Node.js e npm. Siga os passos abaixo:
-- Clone o repositório: `git clone git@github.com:andhuangg/project-whytunes.git`
+## Como instalar e executar o projeto
+- Clone o repositório: `git@github.com:andhuangg/project-whytunes.git`
 - Entre no diretório do projeto: `cd whytunes-project`
 - Instale as dependências: `npm install`
 - Para rodar o projeto localmente: `npm start`
